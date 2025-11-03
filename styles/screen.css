@@ -1,5 +1,5 @@
 body {
-    background-color: #ADA8BE;
+    background-color: #BFABCB;
 }
 
 img { 
@@ -19,7 +19,7 @@ nav {
     margin: 40px auto 0 auto;
     width: 400px;
     border-radius: 50px;
-    background: #212431;
+    background: #F2D5F8;
 }
 
 nav ul {
@@ -40,4 +40,12 @@ nav ul li a {
     color: #000;
     text-decoration: none;
     font-size: 1.2em;
+}
+
+p {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
 }
