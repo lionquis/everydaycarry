@@ -1,5 +1,5 @@
 body {
-    background-color: #D6A99A;
+    background-color: #ADA8BE;
 }
 
 img { 
@@ -9,4 +9,35 @@ img {
 
 img:hover {
   box-shadow: 0 0 2px 1px #000;
+}
+
+nav:hover {
+  box-shadow: 0 0 2px 1px #000;
+}
+
+nav {
+    margin: 40px auto 0 auto;
+    width: 400px;
+    border-radius: 50px;
+    background: #212431;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 0;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 20px;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2em;
 }
