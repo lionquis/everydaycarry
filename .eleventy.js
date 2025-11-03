@@ -4,7 +4,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("styles");
 
-  eleventyConfig.addShortcode("button", (text, url) => {
-    return `<a href="${url}" class="button">${text}</a>`;
+  eleventyConfig.addShortcode("year", () => {
+    return new Date().getFullYear();
   });
 };
