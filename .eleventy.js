@@ -4,19 +4,13 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("styles");
 
-  
-  const Image = require("@11ty/eleventy-img");
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
-    module.exports = function(eleventyConfig) {
-      eleventyConfig.addLiquidShortcode("image", async function(src, alt = "", sizes = "100vw") {
-        let metadata = await Image(src, {
-          widths: [300, 600, 1200],
-          formats: ["png", "webp", "jpeg"],
-          outputDir: "./_site/img/",
-          urlPath: "/img/"
-        });
-
-        let imageAttributes = { alt, sizes, loading: "lazy", decoding: "async" };
-        return Image.generateHTML(metadata, imageAttributes);
-      });
-    }}
+  eleventyConfig.addShortcode("readableDate", (date) => {
+  return new Date(date).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+});
+}
